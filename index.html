@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Car Soccer ⚽🚗</title>
+<meta name="description" content="Soccer with cars! First to 5 goals wins.">
+<meta property="og:title" content="Car Soccer ⚽🚗">
+<meta property="og:description" content="The craziest car soccer game on the web!">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚽%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="game"></canvas>
+
+<!-- Rotate prompt: the game is landscape-only -->
+<div id="rotate-hint" class="hidden">
+  <div class="rotate-icon">🔄</div>
+  <p>Rotate your phone<br>to play!</p>
+</div>
+
+<!-- Touch controls (mobile, player 1) -->
+<div id="touch-ui" class="hidden">
+  <div class="pad pad-left">
+    <button class="tbtn move" data-k="left">◀</button>
+    <button class="tbtn move" data-k="right">▶</button>
+  </div>
+  <div class="pad pad-right">
+    <button class="tbtn" data-k="down">🔽</button>
+    <button class="tbtn fire" data-k="boost">🔥</button>
+    <button class="tbtn big" data-k="jump">⬆</button>
+  </div>
+</div>
+
+<!-- Load order matters: each file may use the previous ones. -->
+<!-- Core: constants, global state, canvas, helpers -->
+<script src="js/core/constants.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/core/canvas.js"></script>
+<script src="js/core/utils.js"></script>
+
+<!-- Players: car colors + country + flag + goal colors for each -->
+<script src="js/players/registry.js"></script>
+<script src="js/players/ronaldo.js"></script>
+<script src="js/players/worldcup.js"></script>
+
+<!-- Sound & visual effects -->
+<script src="js/audio.js"></script>
+<script src="js/effects.js"></script>
+
+<!-- Gameplay: factories, physics, collisions, AI, match flow -->
+<script src="js/game/factories.js"></script>
+<script src="js/game/arena.js"></script>
+<script src="js/game/car-physics.js"></script>
+<script src="js/game/ball-physics.js"></script>
+<script src="js/game/collisions.js"></script>
+<script src="js/game/ai.js"></script>
+<script src="js/game/match.js"></script>
+
+<!-- Rendering: stadium, goals, cars, ball, HUD -->
+<script src="js/render/stadium.js"></script>
+<script src="js/render/goals.js"></script>
+<script src="js/render/car.js"></script>
+<script src="js/render/ball.js"></script>
+<script src="js/render/figure.js"></script>
+<script src="js/render/hud.js"></script>
+
+<!-- Screens: menu, character select, VS, play, end -->
+<script src="js/ui/widgets.js"></script>
+<script src="js/ui/menu.js"></script>
+<script src="js/ui/choose.js"></script>
+<script src="js/ui/versus.js"></script>
+<script src="js/ui/play.js"></script>
+<script src="js/ui/end.js"></script>
+
+<!-- Input + the main loop, last -->
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
