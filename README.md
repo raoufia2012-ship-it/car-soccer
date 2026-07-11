@@ -1,5 +1,7 @@
 # Car Soccer ⚽🚗
 
+### [▶ PLAY NOW — free, in your browser](https://raoufia2012-ship-it.github.io/car-soccer/)
+
 **Rocket League meets the World Cup — in your browser, in 2D, with zero dependencies.**
 
 Drive a rocket-powered car for your favorite football nation, fly through the air with turbo boost, and smash the ball into a neon goal. First to 5 goals (or whoever leads at full time) wins. Play against the AI or grab a friend for local 2-player matches on the same keyboard.
@@ -8,7 +10,9 @@ No installation, no build step, no external libraries. Everything — graphics, 
 
 ## ▶ How to play
 
-Just open `index.html` in any modern browser. That's it.
+**Easiest way:** [play it online right here](https://raoufia2012-ship-it.github.io/car-soccer/) — nothing to install.
+
+Or run it locally: just open `index.html` in any modern browser. That's it.
 
 If you prefer a local server (recommended for development):
 
